@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
+.App {
+  font-family: "Alata", sans-serif;
+  text-align: center;
+}
+
+p {
+  font-size: 15px;
+  margin: 5px;
+}
+
+a {
+  color: white;
+}
+
+.backImg {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  top: 0;
+  flex-direction: column;
+  color: #fff;
+}
+
+.titleBanner {
+  background: linear-gradient(rgba(163, 105, 95, 0.7), rgba(75, 85, 86, 0.7));
+  width: 100%;
+  min-width: 690px;
+  height: 40vh;
+  min-height: 315px;
+  margin: 0;
+  position: relative;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  color: white;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.imgSearch {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  height: 3em;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: shake 1s 2 linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(5px, 0);
+  }
+  50% {
+    transform: translate(-5px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.imgSearch:hover {
+  transform: scale(1.1);
+  -webkit-transition: 0.2s all ease-in;
+  -moz-transition: 0.2s all ease-in;
+  transition: 0.2s all ease-in;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.searchField:focus {
+  width: 200px;
+  height: 40px;
+  border-radius: 40px;
+  padding: 0 20px;
+  line-height: 2em;
+  font-weight: 100;
+  font-size: 12px;
+  cursor: auto;
+  font-size: medium;
+  font-family: "Alata", sans-serif;
+}
+
+.searchField {
+  float: right;
+  border: 3px solid #fff;
+  outline: none;
+  width: 40px;
+  cursor: pointer;
+  -webkit-transition: 0.2s all ease-in;
+  -moz-transition: 0.2s all ease-in;
+  transition: 0.2s all ease-in;
+  height: 40px;
+  color: #fff;
+  border-radius: 40px;
+  background: none;
+  font-size: 0;
+}
+
+.close span {
+  width: 3px;
+  height: 20px;
+  border-radius: 2px;
+  background: #fff;
+  display: inline-block;
+}
+
+.x1 {
+  position: absolute;
+  right: 24px;
+  top: 13px;
+  transform: rotate(-45deg);
+  opacity: 0;
+  animation-delay: 2s;
+  -webkit-transition: 0.2s all ease-in;
+  -moz-transition: 0.2s all ease-in;
+  transition: 0.2s all ease-in;
+}
+
+.x2 {
+  position: absolute;
+  right: -3px;
+  top: 33px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  transition: 0.2s all ease-in;
+}
+
+.searchField:focus + div .x1 {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.searchField:focus + div .x2 {
+  right: 24px;
+  top: 13px;
+}
+
+@media only screen and (max-width: 1000) {
+  * {
+    height: auto;
+  }
+  .titleBanner {
+    height: 100vh;
+  }
+}
