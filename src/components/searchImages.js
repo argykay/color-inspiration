@@ -4,7 +4,7 @@ import "../styling/gallery.css";
 import SearchResults from "./searchResults";
 import FilterColor from "./filterColor";
 
-function SearchImages(props) {
+function SearchImages() {
   /**
    * Functional component that handles search.
    * @param {accessKey} Unsplash API access key
@@ -38,7 +38,7 @@ function SearchImages(props) {
       "flex";
   };
 
-  const handleSearch = (e) => {
+  const handleSearch = () => {
     // console.log("VALUE " + value);
     // console.log("URL " + url);
 
@@ -48,8 +48,10 @@ function SearchImages(props) {
     });
   };
 
-  const resetResults = (e) => {
+  const resetResults = () => {
     setResults([]);
+    document.getElementsByClassName("imgSearchResults")[0].style.display =
+      "none";
   };
 
   return (

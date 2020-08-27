@@ -5,9 +5,9 @@ import Header from "./components/header";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
         <Header />
-      </header>
+      </div>
     </div>
   );
 }
